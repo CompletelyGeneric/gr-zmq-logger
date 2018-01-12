@@ -24,9 +24,9 @@ fn main() {
                         .args_from_usage(
                             // TODO: add ability to set ZeroMQ subscription(s)  
                             "<IP> -i --ip <ipaddr>             'Set the ZeroMQ IP address to connect to, of the form \'protocol://host:port\''
-                             [OUTPUT] -o --output [output]     'Write output files to <DIR> (default: gr-zmq-dump)'
+                             [OUTPUT] -o --output [output]     'Write output files to <DIR> (default: \'./\')'
                              [FORMAT] -f --format <format>     'Set output file format. (default: PRETTY) <CSV | JSON | PRETTY>'
-                             [MAXSIZE] -s --size <maxsize>      'Set maximum file size in MB's, that when reached, will continue logging to new file of name <OUTPUT>-N. (default:  5(MB))'
+                             [MAXSIZE] -s --size <maxsize>     'Set maximum file size in MB's, that when reached, will continue logging to new file of name <OUTPUT>-N. (default:  5(MB))'
                              [NUMMSGS] -n --nummsgs <nummsgs>  'Number of ZeroMQ messages to log. (default: infinity)'")
                         .get_matches();
 
